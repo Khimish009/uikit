@@ -1,5 +1,5 @@
 import { ChangeEvent, KeyboardEvent, useState } from "react";
-import styles from './TagsInput.module.css'
+import './TagsInput.scss'
 
 interface TagsInputProps {
   tags: string[];
@@ -43,17 +43,17 @@ export const TagsInput = ({ tags, onChange }: TagsInputProps) => {
 
   return (
     <div
-      className={styles.tagsInput}
+      className="tags-input"
     >
       {tags.map((tag) => (
         <div
           data-testid="tag"
           key={tag}
-          className={styles.tagsInputTag}
+          className="tags-input-tag"
         >
           {tag}
           <div
-            className={styles.tagsInputTagDelete}
+            className="tags-input-tag-delete"
             onClick={() => handleDelete(tag)}
             data-testid="tag-delete"
           >
@@ -65,7 +65,7 @@ export const TagsInput = ({ tags, onChange }: TagsInputProps) => {
         value={value}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        className={styles.tagsInputInput}
+        className="tags-input-input"
         type="text"
         data-testid="tags-input"
       />
