@@ -68,6 +68,7 @@ export const TagsInput = ({ tags, onChange }: TagsInputProps) => {
         className="tags-input-input"
         type="text"
         data-testid="tags-input"
+        placeholder="Type tag"
       />
     </div>
   );

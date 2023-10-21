@@ -3,7 +3,7 @@ import { TagsInput } from "./TagsInput";
 import "./styles.css";
 
 export default function App() {
-  const [tags, setTags] = useState<string[]>(["tag1", "tag2"]);
+  const [tags, setTags] = useState<string[]>([]);
 
   return (
     <div>
